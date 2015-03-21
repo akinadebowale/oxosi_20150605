@@ -36,3 +36,22 @@ CACHES = {
 }
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+
+##########
+# EMAIL #
+##########
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = 'AKIAIG47RPWZKWBELQ3A'
+AWS_SECRET_ACCESS_KEY = 'Aobi9WRQVjtYPsaKMhccWV73RxV41vJGGwrGbkZg0Fni'
+EMAIL_HOST_USER = 'ses-smtp-user.20150321-044233'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+
+# The next two lines may not be required; try without them first.
+DEFAULT_FROM_EMAIL = SERVER_EMAIL = 'mailer@oxosi.com'
+FORMS_DISABLE_SEND_FROM_EMAIL_FIELD = True
+
+# The next line is not required, but may be useful.
+SEND_BROKEN_LINK_EMAILS = True 
