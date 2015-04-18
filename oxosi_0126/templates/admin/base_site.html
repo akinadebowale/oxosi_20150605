@@ -1,0 +1,12 @@
+{% overextends "admin/base_site.html" %}
+{% load mezzanine_tags i18n future staticfiles %}
+
+{% block extrahead %}
+{{ block.super }}
+<script>
+	jQuery(function ($) {
+		var adminTitleIcon = 'OXOSI';
+		$('div.admin-title').html(adminTitleIcon);
+	});
+</script>
+{% endblock %}
