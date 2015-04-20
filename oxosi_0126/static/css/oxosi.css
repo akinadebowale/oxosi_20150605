@@ -227,7 +227,7 @@ img.pull-left {
 
 
 .coming_soon_001 {
-    background: url("http://20150321.oxosi.com:8001/static/media/uploads/coming_soon/sade_for_oxosi.jpg") no-repeat center;
+    background: url("http://oxosi.com/static/media/uploads/sade_for_oxosi.jpg") no-repeat center;
     background-size: 630px 630px;
     margin: 75px auto 0px;
     height: 650px;
@@ -240,7 +240,7 @@ img.pull-left {
 }
 
 body.coming_soon_body_001 {
-    background: transparent url("http://20150321.oxosi.com:8001/static/media/uploads/coming_soon/tiny_grid_%402x.png") repeat scroll 0% 0%;
+    background: transparent url("http://oxosi.com/static/media/uploads/tiny_grid_%402x.png") repeat scroll 0% 0%;
     background-size: 26px 26px;
 }
 
@@ -248,7 +248,7 @@ body.coming_soon_body_001 {
     float: left;
     text-align: center;
     margin-top: 147px;
-    width: 100%; 
+    width: 100%;
 }
 
 .coming_soon_001 .editable-original p {
