@@ -266,6 +266,25 @@ body.coming_soon_body_001 {
     font-size: 23px;
 }
 
+.coming_soon_001 p {
+    margin: 0px auto;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+    text-transform: uppercase;
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 23px;
+    float: left;
+    text-align: center;
+    margin-top: 147px;
+    width: 100%; 
+}
+
+
 /*========================================
             OXOSI BLOG
 ==========================================*/
