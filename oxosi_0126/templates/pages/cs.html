@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=720, user-scalable=yes" />
+        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <title>{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}{% endif %}</title>
+        <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+        {% ifinstalled mezzanine.blog %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url 'blog_post_feed' 'rss' %}">
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+        {% endifinstalled %}
+
+        {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/oxosi.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+        {% if LANGUAGE_BIDI %}
+        <link rel="stylesheet" href="{% static 'css/rtl.css' %}">
+        {% endif %}
+        {% block extra_css %}{% endblock %}
+        {% endcompress %} 
+
+        {% compress js %}
+        <script src="{% static 'mezzanine/js/'|add:settings.JQUERY_FILENAME %}"></script>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/bootstrap-extras.js' %}"></script>
+
+        {% endcompress %}
+
+        <!--[if lt IE 9]>
+        <script src="{% static 'js/html5shiv.js' %}"></script>
+        <script src="{% static 'js/respond.min.js' %}"></script>
+        <![endif]-->
+
+        {% block extra_head %}{% endblock %}
+    </head>
+
+    <body id="{% block body_id %}body{% endblock %}" class="coming_soon_body_001">
+        <div class="container coming_soon_container_001">
+            <div class="row">
+                <div class="col-md-7 middle">
+
+					<div class="coming_soon_001">
+
+						{% block main %}
+						{% if request.GET.sent %}
+							{% editable page.form.response %}
+							{{ page.form.response|richtext_filters|safe }}
+							{% endeditable %}
+						{% else %}
+							{% with page.form as page_form %}
+							{% comment %}
+							{% editable page_form.content %}
+							{{ page_form.content|richtext_filters|safe }}
+							{% endeditable %}
+							{% endcomment %}
+							{% endwith %}
+
+							{% errors_for form %}
+
+							<form class="oxosi_cms-form coming_soon_001a" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+								{% fields_for form %}
+								<div class="form-actions">
+									<input class="btn btn-primary btn-lg" type="submit" value="{{ page.form.button_text }}">
+								</div>
+							</form>
+						{% endif %}
+						{% endblock %}
+
+					</div>
+
+					{% block extra_js %}
+					<script>
+					$(function() {$('.mezzanine-form :input:visible:enabled:first').focus();});
+					</script>
+					{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include "includes/footer_scripts.html" %}
+    </body>
+</html>

@@ -171,6 +171,102 @@ img.pull-left {
 }
 
 /*========================================
+            OXOSI CS bo_add
+==========================================*/
+
+.oxosi_cms-form.coming_soon_001a label {
+    display: none !important;
+}
+
+.oxosi_cms-form.coming_soon_001a .form-actions {
+    display: none;
+}
+
+.oxosi_cms-form.coming_soon_001a .help-block {
+    display: none;
+}
+
+.coming_soon_container_001 .col-md-7 {
+    width: 100%;
+}
+
+.coming_soon_001 .form-group {
+    float: left;
+    margin-top: 142px;
+    width: 100%;
+}
+
+.oxosi_cms-form.coming_soon_001a .form-group > input[type="email"] {
+    text-align: center;
+    margin: 0px auto;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+    text-transform: uppercase;
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 23px;
+    min-width: 400px;
+}
+
+.coming_soon_001 input::-webkit-input-placeholder {
+ color: #555;
+}
+.coming_soon_001 input:-moz-placeholder { /* older Firefox*/
+ color: #555;
+}
+.coming_soon_001 input::-moz-placeholder { /* Firefox 19+ */
+ color: #555;
+}
+.coming_soon_001 input:-ms-input-placeholder {
+ color: #555;
+}
+
+
+.coming_soon_001 {
+    background: url("http://20150321.oxosi.com:8001/static/media/uploads/coming_soon/sade_for_oxosi.jpg") no-repeat center;
+    background-size: 630px 630px;
+    margin: 75px auto 0px;
+    height: 650px;
+    width: 650px;
+    border: 2px solid #fff;
+}
+
+.coming_soon_001:hover {
+    border: 2px solid #ff0000;
+}
+
+body.coming_soon_body_001 {
+    background: transparent url("http://20150321.oxosi.com:8001/static/media/uploads/coming_soon/tiny_grid_%402x.png") repeat scroll 0% 0%;
+    background-size: 26px 26px;
+}
+
+.editable-original {
+    float: left;
+    text-align: center;
+    margin-top: 147px;
+    width: 100%;
+}
+
+.coming_soon_001 .editable-original p {
+    text-align: center;
+    margin: 0px auto;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+    text-transform: uppercase;
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 23px;
+}
+
+/*========================================
             OXOSI BLOG
 ==========================================*/
 
